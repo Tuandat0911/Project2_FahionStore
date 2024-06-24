@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="login-section">
+        <form action="" method="post">
+            <div class="form-box Login">
+                <h2>Sign In</h2>
+
+                <div class="input-box">
+                    <input type="email" required name="email_login" autocomplete="off">
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" required name="password_login" autocomplete="off">
+                    <label for="">Password</label>
+                </div>
+                <div class="input-box">
+                    <button class="btn" type="submit">Sign In</button>
+                </div>
+
+                <div class="account-login">
+                    <label for="">Create an account?<a href="#" class="Register-link">Sign up</a></label>
+                </div>
+            </div>
+        </form>
+
+        <form action="" method="post">
+            <div class="form-box Register">
+                <h2>Sign Up</h2>
+                <div class="input-box">
+                    <input type="text" required name="username" autocomplete="off">
+                    <label for="">Username</label>
+                </div>
+                <div class="input-box">
+                    <input type="email" required name="email" autocomplete="off">
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" required name="password" autocomplete="off">
+                    <label for="">Password</label>
+                </div>
+                <div class="input-box">
+                    <button type="submit" class="btn">Register</button>
+                </div>
+
+                <div class="term-condition">
+                    <label for=""><input type="checkbox" name="" id="">Yes, I agree with the term and condition</label>
+                </div>
+
+                <div class="account-login">
+                    <label for="">Already have an account?<a href="#" class="Login-link">Sign in</a></label>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+    <div class="item">
+        <div class="content">
+            <!-- swipper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="image/login_bg_2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/login_bg.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/login_bg_3.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+
+    const loginsec = document.querySelector('.login-section');
+    const RegisterLink = document.querySelector('.Register-link');
+    const LoginLink = document.querySelector('.Login-link');
+
+    RegisterLink.addEventListener('click',()=>{
+        loginsec.classList.add('active')
+    })
+
+    LoginLink.addEventListener('click',()=>{
+        loginsec.classList.remove('active')
+    })
+</script>
+</body>
+</html>
+
+
